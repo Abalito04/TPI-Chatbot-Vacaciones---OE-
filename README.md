@@ -17,7 +17,7 @@ El bot permite:
 
 ## Stack propuesto
 
-- Lenguaje: Python 3.
+- Lenguaje: Python
 - Plataforma simulada: consola, adaptable a Telegram Bot API, WhatsApp Business API o web.
 - Persistencia: archivos CSV como base de datos simulada.
 - Gestion de estados: maquina de estados implementada en `bot.py`.
@@ -35,10 +35,8 @@ python bot.py
 - `bot.py`: simulador funcional del chatbot.
 - `data/empleados.csv`: base de datos simulada de empleados y saldos.
 - `data/solicitudes.csv`: registro de solicitudes generadas.
-- `docs/informe_TPI.md`: borrador del informe para pasar a PDF.
 - `docs/bpmn_as_is.mmd`: diagrama del proceso manual actual.
 - `docs/bpmn_to_be.mmd`: diagrama del proceso automatizado con bot.
-- `docs/prompts_IA.md`: plantilla para documentar las consultas hechas a IA.
 
 ## Flujo principal
 
