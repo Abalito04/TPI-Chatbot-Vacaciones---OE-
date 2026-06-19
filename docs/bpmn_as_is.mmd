@@ -1,0 +1,15 @@
+flowchart LR
+    inicio((Inicio)) --> empleado[Empleado solicita vacaciones por mail o mensaje]
+    empleado --> rrhh[RR. HH. recibe solicitud manualmente]
+    rrhh --> consulta[RR. HH. consulta saldo en planilla]
+    consulta --> saldo{Tiene dias disponibles?}
+    saldo -- No --> rechazo[RR. HH. informa rechazo]
+    rechazo --> fin_rechazo((Fin))
+    saldo -- Si --> supervisor[Supervisor revisa la solicitud]
+    supervisor --> aprueba{Aprueba?}
+    aprueba -- No --> rechazo_supervisor[Se informa rechazo al empleado]
+    rechazo_supervisor --> fin_rechazo
+    aprueba -- Si --> registro[RR. HH. registra vacaciones en planilla]
+    registro --> aviso[RR. HH. informa aprobacion]
+    aviso --> fin_ok((Fin))
+

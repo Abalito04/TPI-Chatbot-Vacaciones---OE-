@@ -1,0 +1,28 @@
+flowchart LR
+    inicio((Inicio)) --> usuario[Usuario inicia chatbot]
+    usuario --> legajo[Usuario ingresa legajo]
+    legajo --> validar_legajo[Bot consulta base de empleados]
+    validar_legajo --> existe{Legajo valido y activo?}
+    existe -- No --> error_legajo[Bot informa error o deriva a RR. HH.]
+    error_legajo --> fin_error((Fin))
+    existe -- Si --> menu[Bot muestra opciones]
+    menu --> opcion{Opcion elegida}
+    opcion -- Consultar saldo --> saldo[Bot informa dias disponibles]
+    saldo --> fin_saldo((Fin))
+    opcion -- Solicitar vacaciones --> fecha[Usuario ingresa fecha de inicio]
+    fecha --> validar_fecha{Fecha valida?}
+    validar_fecha -- No --> error_fecha[Bot pide corregir formato]
+    error_fecha --> fin_error
+    validar_fecha -- Si --> dias[Usuario ingresa cantidad de dias]
+    dias --> validar_dias{Cantidad numerica y mayor a cero?}
+    validar_dias -- No --> error_dias[Bot informa error de entrada]
+    error_dias --> fin_error
+    validar_dias -- Si --> saldo_ok{Saldo suficiente?}
+    saldo_ok -- No --> rechazo[Bot registra solicitud rechazada]
+    rechazo --> fin_rechazo((Fin))
+    saldo_ok -- Si --> especial{Mas de 10 dias?}
+    especial -- Si --> pendiente[Bot registra pendiente de RR. HH.]
+    pendiente --> fin_pendiente((Fin))
+    especial -- No --> aprobada[Bot registra solicitud aprobada]
+    aprobada --> fin_ok((Fin))
+

@@ -1,0 +1,6 @@
+id,legajo,nombre,fecha_inicio,dias_solicitados,estado,observacion
+
+38d2de41,1001,Ana Perez,2026-09-04,15,pendiente_rrhh,Requiere aprobacion especial por superar 10 dias
+a3467487,1001,Ana Perez,2026-07-01,15,pendiente_rrhh,Requiere aprobacion especial por superar 10 dias
+61190acf,1001,Ana Perez,2026-08-01,10,aprobada,Aprobacion automatica por saldo suficiente
+be6e4382,1002,Bruno Gomez,2026-09-02,15,rechazada,Dias solicitados mayores al saldo
